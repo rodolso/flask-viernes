@@ -16,6 +16,11 @@ app = Flask(__name__)
 def hello(): # Ligado al endopoint "/" o sea el home, con el método GET
     return "Bienvenido a mi API del modelo advertising"
 
+
+@app.route("/api/v1/extra", methods=["GET"])
+def extra(): # Ligado al endopoint "/" o sea el home, con el método GET
+    return "Esto se actualiza solo"
+
 # Enruta la funcion al endpoint /api/v1/predict
 @app.route("/api/v1/predict", methods=["GET"])
 def predict(): # Ligado al endpoint '/api/v1/predict', con el método GET
